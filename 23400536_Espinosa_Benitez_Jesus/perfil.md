@@ -17,5 +17,8 @@ Tecnologías:
 - Javascript
 - SQL
 
+Contacto:
+- jeespinosabe@ittepic.edu.mx
+
 Pelicula recomendada:
 - La vida es bella (La vita è bella, 1997, Roberto Benigni)
