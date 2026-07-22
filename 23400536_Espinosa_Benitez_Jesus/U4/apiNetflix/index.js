@@ -58,7 +58,7 @@ const peliculaSchema = new mongoose.Schema(
 const Pelicula = mongoose.model(
 	"Pelicula",
 	peliculaSchema,
-	"Peliculas"
+	"peliculas"
 );
 
 //consulta
@@ -190,7 +190,7 @@ async function iniciarServidor() {
     console.log("Conectado a MongoDB");
 
     app.listen(port, () => {
-        console.log('Servidor iniciado en http://localhost:${port}');
+        console.log(`Servidor iniciado en http://localhost:${port}`);
     });
 
     }catch (error) {
