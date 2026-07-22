@@ -10,23 +10,11 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
 
-//la conexion a la bd
-mongoose.connect("mongodb+srv://grupo:grupo@servidorprueba.ygegryf.mongodb.net/netflix")
-	.then(() => {
-		console.log("Conectado correctamente a MongoDB");
-	})
-	.catch((error) => {
-		console.log("Error al conectar a MongoDB:", error);
-	});
-
 //prueba
 app.get("/", (req, res) => {
 	res.send("API de Netflix funcionando");
 });
 
-app.listen(port, () => {
-	console.log(`Servidor iniciado en http://localhost:${port}`);
-});
 
 //esquema
 const peliculaSchema = new mongoose.Schema(
@@ -192,3 +180,24 @@ app.delete("/peliculas/:id", async (req, res) => {
 		});
 	}
 });
+
+async function iniciarServidor() {
+    
+    try {
+
+    await mongoose.connect("mongodb+srv://grupo:grupo@servidorprueba.ygegryf.mongodb.net/netflix");
+
+    console.log("Conectado a MongoDB");
+
+    app.listen(port, () => {
+        console.log('Servidor iniciado en http://localhost:${port}');
+    });
+
+    }catch (error) {
+        console.error("Error al conectar a MongoDB:", error);
+        console.error(error.message);
+    }
+
+}
+
+iniciarServidor();

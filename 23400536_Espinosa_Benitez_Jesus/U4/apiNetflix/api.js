@@ -1,6 +1,6 @@
 api.js
 
-const API_URL = "URL_VERCEL";
+const API_URL = "https://api-netflix-mocha.vercel.app/";
 
 // Obtener películas
 async function obtenerPeliculas() {
