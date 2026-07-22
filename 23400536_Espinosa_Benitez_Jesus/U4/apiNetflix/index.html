@@ -1,0 +1,112 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consumir API REST</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 600px;
+            margin: 30px auto;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Películas</h1>
+
+    <h2>Registrar película</h2>
+
+    <form id="formulario">
+
+        <input
+            type="text"
+            id="titulo"
+            placeholder="Título"
+            required
+        >
+
+        <input
+            type="text"
+            id="genero"
+            placeholder="Género"
+            required
+        >
+
+        <input
+            type="number"
+            id="año"
+            placeholder="Año"
+            required
+        >
+
+        <input
+            type="number"
+            id="duracion"
+            placeholder="Duración"
+            required
+        >
+
+        <input
+            type="text"
+            id="idioma"
+            placeholder="Idioma"
+            required
+        >
+
+        <input
+            type="number"
+            id="calificacion"
+            placeholder="Calificación"
+            min="0"
+            max="10"
+            step="0.1"
+            required
+        >
+
+        <button type="submit">
+            Guardar película
+        </button>
+
+    </form>
+
+    <hr>
+
+    <button id="btnConsultar">
+        Consultar películas
+    </button>
+
+    <ul id="listaPeliculas"></ul>
+
+    <script src="api.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
