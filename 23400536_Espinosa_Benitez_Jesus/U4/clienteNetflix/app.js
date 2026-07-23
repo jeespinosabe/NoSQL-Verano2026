@@ -1,5 +1,3 @@
-app.js
-
 const formulario = document.getElementById("formulario");
 
 const titulo = document.getElementById("titulo");
