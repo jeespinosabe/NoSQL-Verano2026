@@ -1,5 +1,3 @@
-api.js
-
 const API_URL = "https://api-netflix-mocha.vercel.app/";
 
 // Obtener películas
